@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
 # Return user name and their respective home directory, separated by a single " "
-fetch_users_and_homedir()
-{
-    cat /etc/passwd | egrep -v '^(halt|sync|shutdown)' |\
-     awk -F: '($7 != "/usr/sbin/nologin" && $7 != "/bin/false" && $3 >= 1000)\
-     { print $1 " " $6 }'
-}
+#fetch_users_and_homedir()
+# {
+#    cat /etc/passwd | egrep -v '^(halt|sync|shutdown)' |\
+#    awk -F: '($7 != "/usr/sbin/nologin" && $7 != "/bin/false" && $3 >= 1000)\
+#     { print $1 " " $6 }'
+# }
 
-fetch_users_and_homedir |\
-while read user dir; do
-    chmod o-wrx,g-w "${dir}"
-done
+#fetch_users_and_homedir |\
+#while read user dir; do
+#    chmod o-wrx,g-w "${dir}"
+#done
 
 ls /home | grep '{{ domain }}' |\
 while read dir; do
