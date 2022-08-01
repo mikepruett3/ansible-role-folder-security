@@ -20,7 +20,7 @@
     dest: /root/scripts/homedir-permissions.sh
     owner: root
     group: root
-    mode: '0755'
+    mode: '0750'
 
 - name: "Run script to set mode 0750 on All Interactive User Home Directories"
   ansible.builtin.command: "./homedir-permissions.sh"
