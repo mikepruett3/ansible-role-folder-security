@@ -13,7 +13,7 @@
 #    chmod o-wrx,g-w "${dir}"
 #done
 
-ls /home | grep '{{ domain }}' |\
+ls /home |\
 while read dir; do
     chmod o-wrx,g-w "/home/${dir}"
 done
