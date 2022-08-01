@@ -12,3 +12,8 @@ fetch_users_and_homedir |\
 while read user dir; do
     chmod o-wrx,g-w "${dir}"
 done
+
+ls /home | grep '{{ domain }}' |\
+while read dir; do
+    chmod o-wrx,g-w "${dir}"
+done
