@@ -15,5 +15,5 @@ done
 
 ls /home | grep '{{ domain }}' |\
 while read dir; do
-    chmod o-wrx,g-w "${dir}"
+    chmod o-wrx,g-w "/home/${dir}"
 done
