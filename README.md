@@ -6,7 +6,7 @@ Ansible role to configure folder security settings on Linux Servers.
 Requirements
 ------------
 
-The role does not require anything to run on RHEL and its derivatives.
+The role does not require anything to run on Ubuntu, Debian or RHEL and its derivatives.
 
 Dependencies
 ------------
