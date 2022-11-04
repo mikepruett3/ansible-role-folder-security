@@ -1,14 +1,6 @@
 ---
 # tasks file for ansible-role-folder-security
 
-#- name: "Include OS-specific variables"
-#  include_vars: "{{ ansible_os_family }}.yaml"
-
-#- name: "Gather the package facts"
-#  ansible.builtin.package_facts:
-#    manager: auto
-#  when: ansible_facts.packages is not defined
-
 - name: "Create scripts directory under root homedir, if it does not exist"
   ansible.builtin.file:
     path: "/root/scripts/"
@@ -26,4 +18,3 @@
   ansible.builtin.command: "./homedir-permissions.sh"
   args:
     chdir: "/root/scripts/"
-
